@@ -14,11 +14,11 @@ A c++ letter matrix solver using tries and Unix word list.
 ## How it works
 1- It loads the Unix word list - `/usr/share/dict/words` - in memory in a Trie.
 
-2- For each index in the matrix words formed horizontally, vertically and diagonally - of length at least 3 - are searched for in the Trie.
+2- For each index in the matrix words formed horizontally, vertically and diagonally - of length at least 3 and at most the maximum length in the trie - are searched for in the Trie.
 
 3- Matches are added to a set to remove duplicates.
 
-Given that the search in a trie takes at most length of longest word in dictionary iterations which is constant. The overall complexity of solving the letter matrix is O(N^3) with a pre-computation to the dictionary which takes linear time.
+Given that the search in a trie takes at most length of longest word in dictionary iterations which is constant. The overall complexity of solving the letter matrix is O(N^2) with a constant factor of ~100 - assuming that the longest word in the dictionary is 10 characters long - and with a pre-computation to the dictionary which takes linear time.
 
 To learn more about tries read this [Topcoder tutorial](http://community.topcoder.com/tc?module=Static&d1=tutorials&d2=usingTries).
 
