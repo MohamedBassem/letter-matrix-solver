@@ -12,13 +12,14 @@ A c++ letter matrix solver using tries and Unix word list.
 4- Output is printed to stdout.
 
 ## How it works
-1- It loads the Unix word list - `/usr/share/dict/words` - in the memory in a Trie.
+1- It loads the Unix word list - `/usr/share/dict/words` - in memory in a Trie.
 
 2- For each index in the matrix words formed horizontally, vertically and diagonally - of length at least 3 - are searched for in the Trie.
 
 3- Matches are added to a set to remove duplicates.
 
-Given that the search in the trie takes at most length of longest word in dictionary iteration which is constant. The overall complexity of solving the letter matrix is O(N^3) with a pre-computation to the dictionary which takes linear time.
+Given that the search in a trie takes at most length of longest word in dictionary iterations which is constant. The overall complexity of solving the letter matrix is O(N^3) with a pre-computation to the dictionary which takes linear time.
+
 To learn more about tries read this [Topcoder tutorial](http://community.topcoder.com/tc?module=Static&d1=tutorials&d2=usingTries).
 
 ## Example
@@ -28,7 +29,7 @@ An Example from [Medium](https://medium.com/@Medium/wordsearchwednesday-a519722b
 ```bash
 $ make
 g++ ./src/Trie.cpp ./src/LetterMatrixSolver.cpp ./src/Main.cpp ./src/Util.cpp -o main -std=c++11
-$ ./main
+$ time ./main
 30
 AEUPHEMISMPAOAM
 ENUUSETOLPPXNDD
@@ -289,5 +290,9 @@ USE
 YES
 YET
 YON
+
+real    0m0.101s
+user    0m0.066s
+sys     0m0.031s
 ```
 Using a better dictionary will lead to better results without affecting the complexity.
