@@ -18,11 +18,13 @@ class Node {
 
 class Trie {
   vector<Node> trie;
+  int maxLength;
 
   public:
     Trie();
     bool check(string &word);
     bool insert(string &word);
+    int getMaxLength();
 };
 
 #endif // _TRIE_H_

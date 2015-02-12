@@ -48,6 +48,7 @@ vector<string> LetterMatrixSolver::solve(string seriallizedMatrix){
         stringToBeChecked += grid[k][j];
         stringToBeCheckedRev = grid[k][j] + stringToBeCheckedRev;
         if( stringToBeChecked.size() < 3 ) continue;
+        if( stringToBeChecked.size() > trie.getMaxLength() ) break;
         if( trie.check(stringToBeChecked) ){
           extractedWords[stringToBeChecked]++;
         }
@@ -63,6 +64,7 @@ vector<string> LetterMatrixSolver::solve(string seriallizedMatrix){
         stringToBeChecked += grid[i][k];
         stringToBeCheckedRev = grid[i][k] + stringToBeCheckedRev;
         if( stringToBeChecked.size() < 3 ) continue;
+        if( stringToBeChecked.size() > trie.getMaxLength() ) break;
         if( trie.check(stringToBeChecked) ){
           extractedWords[stringToBeChecked]++;
         }
@@ -78,6 +80,7 @@ vector<string> LetterMatrixSolver::solve(string seriallizedMatrix){
         stringToBeChecked += grid[i+k][j+k];
         stringToBeCheckedRev = grid[i+k][j+k] + stringToBeCheckedRev;
         if( stringToBeChecked.size() < 3 ) continue;
+        if( stringToBeChecked.size() > trie.getMaxLength() ) break;
         if( trie.check(stringToBeChecked) ){
           extractedWords[stringToBeChecked]++;
         }

@@ -3,6 +3,7 @@
 
 Trie::Trie(){
   trie.push_back(Node());
+  maxLength = 0;
 }
 
 bool Trie::check(string &word){
@@ -25,6 +26,7 @@ bool Trie::check(string &word){
 bool Trie::insert(string &word){
   if( ! Util::isNoSpecialChars(word) )
     return false;
+  maxLength = max(maxLength, (int)word.size());
   int node = 0;
   int i = 0;
   while(i < (int)word.size()){
@@ -40,6 +42,10 @@ bool Trie::insert(string &word){
   }
   trie[node].setEndOfWord(true);
   return true;
+}
+
+int Trie::getMaxLength(){
+  return maxLength;
 }
 
 Node::Node(){
