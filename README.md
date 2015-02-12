@@ -291,8 +291,8 @@ YES
 YET
 YON
 
-real    0m0.101s
-user    0m0.066s
-sys     0m0.031s
+real    0m0.059s
+user    0m0.059s
+sys     0m0.000s
 ```
 Using a better dictionary will lead to better results without affecting the complexity.
