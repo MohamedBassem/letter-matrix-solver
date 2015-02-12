@@ -24,7 +24,7 @@ To learn more about tries read this [Topcoder tutorial](http://community.topcode
 
 ## Example
 
-An Example from [Medium](https://medium.com/@Medium/wordsearchwednesday-a519722b5afd).
+An Example using one of [Medium's #wordsearchwednesday](https://medium.com/@Medium/wordsearchwednesday-a519722b5afd).
 
 ```bash
 $ make
