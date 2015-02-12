@@ -1,7 +1,7 @@
 # Letter Matrix Solver
 A c++ letter matrix solver using tries and Unix word list.
 
-## How to make work
+## How to make it work
 
 1- Clone the repo.
 
