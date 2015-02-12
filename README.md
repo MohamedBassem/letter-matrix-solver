@@ -12,7 +12,7 @@ A c++ letter matrix solver using tries and Unix word list.
 4- Output is printed to stdout.
 
 ## How it works
-1- It loads the Unix word list - `/usr/share/dict/words/` - in the memory in a Trie.
+1- It loads the Unix word list - `/usr/share/dict/words` - in the memory in a Trie.
 
 2- For each index in the matrix words formed horizontally, vertically and diagonally - of length at least 3 - are searched for in the Trie.
 
