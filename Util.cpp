@@ -4,7 +4,7 @@ int Util::getCharIndex(char c){
   if( c >= 'a' && c <= 'z' ){
     return c - 'a';
   }else{
-    return c - 'z';
+    return c - 'A';
   }
 }
 
