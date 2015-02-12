@@ -7,6 +7,8 @@
 #include <fstream>
 #include <cstring>
 #include <cstdlib>
+#include <sstream>
+#include <map>
 
 using namespace std;
 
