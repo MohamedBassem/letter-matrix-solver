@@ -31,6 +31,7 @@ bool Trie::insert(string &word){
     int charIdx = Util::getCharIndex(word[i]);
     if( trie[node].getIndex(charIdx) == -1 ){
       trie[node].setIndex(charIdx, trie.size());
+      node = trie.size();
       trie.push_back(Node());
     }else{
       node = trie[node].getIndex(charIdx);
@@ -38,7 +39,6 @@ bool Trie::insert(string &word){
     i++;
   }
   trie[node].setEndOfWord(true);
-
   return true;
 }
 
