@@ -37,6 +37,7 @@ bool Trie::insert(string &word){
     }
     i++;
   }
+  trie[node].setEndOfWord(true);
 
   return true;
 }
